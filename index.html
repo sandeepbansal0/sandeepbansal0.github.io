@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="Sandeep Bansal — Data Analytics, Data Science &amp; Engineering portfolio" name="description"/><title>Sandeep Bansal | Data &amp; Analytics</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet"/><style>
+:root{--ink:#163b65;--muted:#64748b;--line:#d9e3ed;--accent:#e16b2d;--bg:#f8fafc;--soft:#fff0e5}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.7}a{color:inherit;text-decoration:none}a:hover{color:var(--accent)}.wrap{max-width:1040px;margin:auto;padding:0 30px}header{position:sticky;top:0;z-index:10;background:#f8fafced;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font:400 25px "Playfair Display",serif;letter-spacing:-.8px}.brand span{color:var(--accent)}.links{display:flex;gap:26px;font-size:13px;font-weight:700}.hero{padding:120px 0 115px;max-width:820px}.eyebrow{text-transform:uppercase;letter-spacing:2.5px;font-size:12px;font-weight:800;color:var(--accent)}h1,h2,h3{font-family:"Playfair Display",serif;letter-spacing:-.7px;line-height:1.15}h1{font-size:clamp(44px,7vw,78px);margin:20px 0 22px}h1 em{font-style:italic;color:var(--accent)}.lead{font-size:20px;line-height:1.8;color:#52647a;max-width:700px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}.btn{padding:12px 19px;border-radius:8px;border:1px solid #b8cadc;font-size:13px;font-weight:800}.btn.primary{background:var(--accent);color:white;border-color:var(--accent)}section{padding:75px 0;border-top:1px solid var(--line)}.sectionhead{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:35px}h2{font-size:34px;margin:0}p{margin-top:0}.about{display:grid;grid-template-columns:1.4fr 1fr;gap:75px}.about p{color:#52647a}.small-title{font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent)}.stat{border-bottom:1px solid var(--line);padding:14px 0}.stat strong{display:block;font-size:15px}.stat span{color:var(--muted);font-size:13px}.experience{display:grid;grid-template-columns:170px 1fr;gap:25px;padding:26px 0;border-bottom:1px solid var(--line)}.date{font-size:12px;color:var(--muted);font-weight:700}.company{display:flex;align-items:center;gap:12px}.company h3{margin:0;font-size:18px;letter-spacing:-.5px}.role{font-size:13px;color:var(--accent);font-weight:800;margin:5px 0 8px}.experience p{font-size:14px;color:#64748b;margin:0}.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project{border:1px solid var(--line);background:#ffffff;border-radius:13px;padding:27px;transition:transform .2s,border-color .2s}.project:hover{transform:translateY(-3px);border-color:#e16b2d}.num{font-size:12px;color:var(--accent);font-weight:800}.project h3{font-size:19px;letter-spacing:-.6px;margin:15px 0 12px}.project p{font-size:14px;color:var(--muted)}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}.tag{background:var(--soft);padding:4px 9px;border-radius:5px;font-size:11px;color:#e16b2d;font-weight:700}.skills{display:flex;flex-wrap:wrap;gap:9px}.skill{border:1px solid #d9e3ed;border-radius:7px;padding:9px 14px;background:#ffffff;font-size:13px;font-weight:600}.github{padding:34px;border-radius:15px;background:var(--soft);display:flex;justify-content:space-between;align-items:center;gap:25px}.github p{color:var(--muted);font-size:14px;max-width:620px}.edu{display:flex;justify-content:space-between;gap:20px;padding:20px 0;border-bottom:1px solid var(--line)}.edu strong{display:block}.edu span{color:var(--muted);font-size:13px}footer{padding:45px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:20px}@media(max-width:700px){.wrap{padding:0 20px}.links{gap:12px;font-size:11px}.links a:nth-child(2),.links a:nth-child(3){display:none}.hero{padding:80px 0}.about,.projects{grid-template-columns:1fr;gap:20px}.experience{grid-template-columns:1fr;gap:8px}.github,.edu,footer{flex-direction:column;align-items:flex-start}section{padding:55px 0}h2{font-size:29px}}
+
+/* More expressive, editorial-style hero and interactive details */
+.hero{position:relative;max-width:960px;padding:130px 0 120px}
+.hero:after{content:"✳";position:absolute;right:1%;top:85px;font-size:clamp(90px,16vw,195px);color:#f9d7be;opacity:.5;line-height:1;pointer-events:none;transform:rotate(-15deg)}
+.hero-intro{position:relative;z-index:1;font-family:"Playfair Display",serif;font-size:clamp(37px,6.2vw,76px);line-height:1.12;letter-spacing:-1.8px;color:var(--ink);margin-bottom:24px}
+.hero-intro span{color:var(--accent);font-style:italic}
+.hero h1{position:relative;z-index:1;font-size:clamp(32px,4.5vw,58px);max-width:780px;margin:0 0 24px;font-weight:400}
+.hero .lead{position:relative;z-index:1;max-width:650px}
+.hero .actions{position:relative;z-index:1}
+.btn{transition:transform .2s ease,background .2s ease,box-shadow .2s ease}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px #e16b2d24}
+.project{transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.project:hover{transform:translateY(-6px);box-shadow:0 16px 35px #e16b2d18}
+section{scroll-margin-top:80px}
+@media(max-width:700px){.hero{padding:95px 0 85px}.hero:after{font-size:100px;top:30px;right:0;opacity:.26}.hero-intro{letter-spacing:-.7px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.project{transition:none}}
+
+/* Refined navy and soft teal editorial palette */
+body{background:linear-gradient(180deg,#f8fafc 0%,#eef4fa 52%,#f8fafc 100%)}
+header{background:#f8fafced}.hero{position:relative}.hero:after{color:#f7dbc7;opacity:.7}
+.hero-intro{font-weight:600}.hero-intro span{color:#dc6428}.btn.primary{box-shadow:0 8px 22px #e16b2d26}.btn.primary:hover{background:#bd4e1c;color:white;transform:translateY(-2px)}
+.btn{transition:transform .2s,background .2s,box-shadow .2s}.project{box-shadow:0 7px 26px #163b6508}.project:hover{box-shadow:0 16px 32px #163b6512}
+::selection{background:#ffe0c8;color:#163b65}
+/* Refined color placement: navy anchors, orange used sparingly for emphasis */
+:root{--ink:#102D4E;--accent:#E77932;--bg:#FFFFFF;--soft:#FFF5EC;--line:#DCE6F0}
+body{background:#fff;color:var(--ink)}header{background:#ffffffed}
+.hero{background:linear-gradient(125deg,#F0F6FC 0%,#FFFFFF 68%);border-radius:0 0 28px 28px;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px)}
+.hero:after{color:#E77932;opacity:.12}
+.hero-intro span{color:#102D4E;font-style:normal}.hero h1 em{color:#E77932}
+.btn.primary{background:#102D4E;border-color:#102D4E;box-shadow:none}.btn.primary:hover{background:#194C7E}
+.sectionhead h2{border-left:5px solid #E77932;padding-left:16px}
+.experience{padding:30px 18px;border-radius:12px;transition:background .2s}
+.experience:hover{background:#F1F6FB}
+.company h3{font-family:'DM Sans',sans-serif;font-size:clamp(23px,2.7vw,30px);font-weight:800;letter-spacing:-.8px;line-height:1.2;color:#102D4E}
+.role{color:#C85C1F;font-size:14px;letter-spacing:.2px}
+.project{border-top:4px solid #173E69;box-shadow:0 6px 22px #102D4E0a}
+.project:hover{border-color:#E77932}
+.github{background:#102D4E;color:#FFFFFF}.github h2,.github .small-title{color:#FFFFFF}.github p{color:#D5E1EC}.github .btn.primary{background:#E77932;border-color:#E77932}
+.tag{color:#A94C1D;background:#FFF1E6}
+@media(max-width:700px){.experience{padding:22px 8px}.company h3{font-size:24px}}
+
+/* Navy canvas with crisp white typography and warm orange highlights */
+:root{--ink:#FFFFFF;--muted:#C7D8EB;--line:#345879;--accent:#FF9A4D;--bg:#102D4E;--soft:#1B4167}
+html{background:#102D4E}body{background:linear-gradient(145deg,#102D4E 0%,#153D64 52%,#0B2541 100%);color:#FFFFFF}
+header{background:rgba(12,35,61,.95);border-bottom-color:#345879}
+.brand,.links a,h1,h2,h3,.hero-intro,.hero-intro span,.company h3,.stat strong,.edu strong{color:#FFFFFF}
+.brand span,.hero h1 em,.eyebrow,.small-title,.role,.num{color:#FF9A4D}
+.hero{background:linear-gradient(125deg,#1B4771 0%,#102D4E 72%);border:1px solid #345879;border-radius:24px;margin-top:34px}
+.hero:after{color:#FF9A4D;opacity:.13}
+.hero-intro span{color:#FF9A4D;font-style:italic}
+.lead,.about p,.experience p,.project p,.github p,.stat span,.edu span,.date,footer,#contact p{color:#C7D8EB}
+section,.experience,.edu,.stat{border-color:#345879}
+.experience:hover{background:#1B4167;border-radius:10px}
+.company h3{color:#FFFFFF;font-size:clamp(24px,2.8vw,32px);font-weight:800}
+.project{background:#193E64;border-color:#416283;color:#FFFFFF}
+.project:hover{background:#214C76;border-color:#FF9A4D}
+.project h3{color:#FFFFFF}
+.skill{background:#1C456D;border-color:#416283;color:#FFFFFF}
+.tag{background:#314866;color:#FFB67E}
+.github{background:#0A213A;border:1px solid #416283}
+.github h2,.github .small-title{color:#FFFFFF}
+.btn{color:#FFFFFF;border-color:#7896B2;background:transparent}
+.btn:hover{color:#FFB67E;border-color:#FF9A4D}
+.btn.primary,.github .btn.primary{background:#F28A3F;border-color:#F28A3F;color:#112C48;box-shadow:none}
+.btn.primary:hover,.github .btn.primary:hover{background:#FFAB6D;border-color:#FFAB6D;color:#112C48}
+::selection{background:#FF9A4D;color:#102D4E}
+/* Keep the silver star away from the name and behind the hero content */
+.hero:after{color:#C0C0C0;opacity:.45;right:24px;top:auto;bottom:18px;font-size:clamp(55px,8vw,100px);z-index:0}
+.hero-intro,.hero h1,.hero .lead,.hero .actions{position:relative;z-index:2}
+@media(max-width:700px){.hero:after{right:12px;bottom:12px;top:auto;font-size:55px;opacity:.25}}
+.career-tagline{position:relative;z-index:2;font-family:"DM Sans",sans-serif;font-size:clamp(12px,1.65vw,16px);font-weight:700;letter-spacing:.15px;color:#E8F1FA;margin:-7px 0 30px;line-height:1.8}.tagline-separator{color:#FF9A4D;padding:0 8px}@media(max-width:700px){.career-tagline{margin-top:0;margin-bottom:25px}.tagline-separator{padding:0 4px}}
+/* Larger About section heading, with responsive sizing */
+#about .sectionhead h2{font-size:clamp(38px,4.8vw,54px);line-height:1.18}
+@media(max-width:700px){#about .sectionhead h2{font-size:clamp(32px,7vw,42px)}}
+
+/* Larger headings for Tools & Technologies and Selected Projects */
+#skills .sectionhead h2, #projects .sectionhead h2{font-size:clamp(40px,5.3vw,58px);line-height:1.16}
+@media(max-width:700px){#skills .sectionhead h2, #projects .sectionhead h2{font-size:clamp(34px,7.5vw,44px)}}
+.hero-intro .hero-divider{color:#FF9A4D;font-style:normal}.hero-intro span:last-child{font-style:italic}@media(max-width:700px){.hero-intro{font-size:clamp(32px,7vw,46px)}}
+/* Match the italic editorial typography used for “Insights Into Impact.” */
+.hero-intro span:last-child{font-family:"Playfair Display",serif;font-style:italic;font-weight:400;letter-spacing:-.7px;color:#FF9A4D}
+
+/* Clear four-line hero hierarchy: name, credentials, two-line statement */
+.hero-intro{font-size:clamp(34px,4.8vw,56px);line-height:1.25;letter-spacing:-.7px;margin-bottom:18px}
+.hero-intro span:last-child{font-family:"Playfair Display",serif;font-style:italic;font-weight:400}
+.career-tagline{margin:0 0 32px;font-size:clamp(12px,1.55vw,16px)}
+.hero h1{font-size:clamp(27px,3.5vw,39px);line-height:1.28;margin:0 0 24px;max-width:none}
+@media(max-width:700px){.hero-intro{font-size:clamp(32px,7vw,44px)}.hero h1{font-size:clamp(27px,5.7vw,37px)}.career-tagline{margin:0 0 26px}}
+/* Keep the complete name and expertise heading on one line at all viewport sizes. */
+.hero-intro{white-space:nowrap;font-size:clamp(13px,3.75vw,48px);letter-spacing:-.7px}
+@media(max-width:700px){.hero-intro{font-size:clamp(13px,3.75vw,26px);letter-spacing:-.45px}}
+ .hero-intro .hero-name{font-size:1.14em;color:#FFFFFF;font-style:normal;font-weight:600}
+
+/* White punctuation in the top-left site brand */
+.brand span{color:#FFFFFF}
+
+/* Organized technical expertise — light-orange category titles */
+.skill-search-wrap{margin-bottom:22px}
+.skill-search{width:100%;padding:14px 17px;border:1px solid #416283;border-radius:10px;background:#193E64;color:#fff;font:500 14px 'DM Sans',sans-serif;outline:none}
+.skill-search::placeholder{color:#C7D8EB}
+.skill-search:focus{border-color:#FFB366;box-shadow:0 0 0 2px #FFB36644}
+.skill-categories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.skill-category{background:#193E64;border:1px solid #416283;border-radius:13px;padding:24px;min-width:0}
+.skill-category h3{font-family:'DM Sans',sans-serif;font-size:19px;letter-spacing:0;line-height:1.35;color:#FFB366;margin:0 0 17px;font-weight:700}
+.skill-category .skills{gap:8px}
+.skill-category .skill{background:#314866;border-color:#4c6682;color:#fff;font-size:12px;padding:7px 11px}
+.skill-empty{color:#C7D8EB}
+@media(max-width:700px){.skill-categories{grid-template-columns:1fr}.skill-category{padding:19px}}
+
+/* Reduce vertical gap between introduction and Tools & Technologies */
+#about{padding-bottom:32px}
+#skills{padding-top:32px}
+@media(max-width:700px){#about{padding-bottom:24px}#skills{padding-top:24px}}
+
+/* Detailed expertise: two equal-width columns with vertically aligned skill rows. */
+.skill-category-detailed .skills{display:grid;grid-template-columns:minmax(0,1fr);gap:7px}
+.skill-category-detailed .skill{display:block;width:100%;padding:10px 12px;line-height:1.45;border-radius:7px;font-size:13px;overflow-wrap:anywhere}
+.skill-category-detailed h3{font-size:22px;margin-bottom:20px}
+@media(max-width:700px){.skill-category-detailed .skill{font-size:12px}}
+
+.sql-category{grid-column:1/-1;background:#102B52;padding:30px}
+.sql-category>h3{font-size:38px;color:#fff;line-height:1.15;margin:0 0 24px;font-weight:800}
+.sql-subgroups{display:grid;grid-template-columns:minmax(0,1fr);gap:25px}
+.sql-subgroup h4{font-size:17px;color:#FFB366;margin:0 0 12px;font-weight:700;white-space:nowrap}
+.sql-subgroup .skills{display:flex;flex-wrap:wrap;gap:8px}
+.sql-subgroup .skill{background:#24456E;color:#F5F7FA;border:0;padding:9px 12px;border-radius:7px;font-size:12px}
+@media(max-width:700px){.sql-subgroups{grid-template-columns:1fr}.sql-category{padding:22px}.sql-category>h3{font-size:clamp(25px,6vw,34px)}.sql-subgroup h4{font-size:clamp(12px,3.5vw,17px)}}
+
+/* Relational strengths use the original skill-tag presentation. */
+#cognitive-strengths .sectionhead h2 {
+  font-size:clamp(34px,4.5vw,54px);
+  line-height:1.18;
+}
+#cognitive-strengths .skill-category { width:100%; }
+#cognitive-strengths .skills { display:flex; flex-wrap:wrap; gap:8px; }
+@media(max-width:700px){
+  #cognitive-strengths .sectionhead h2 {font-size:clamp(30px,7vw,42px);}
+}
+#cognitive-strengths .sectionhead h2{font-size:clamp(22px,3.4vw,34px);white-space:nowrap;letter-spacing:-.8px}@media(max-width:700px){#cognitive-strengths .sectionhead h2{font-size:clamp(13px,3.5vw,23px);letter-spacing:-.6px;padding-left:9px;border-left-width:3px}}
+</style><style>#cognitive-strengths .sectionhead h2{font-size:clamp(40px,5.3vw,58px);line-height:1.16;white-space:nowrap;letter-spacing:-1.6px;}@media(max-width:900px){#cognitive-strengths .sectionhead h2{font-size:clamp(18px,4.1vw,40px);letter-spacing:-.8px;}}@media(max-width:700px){#cognitive-strengths .sectionhead h2{font-size:clamp(13px,3.5vw,23px);letter-spacing:-.6px;padding-left:9px;border-left-width:3px;}}
+/* Keep each expertise subcategory heading on a single line. */
+.sql-subgroup h4{white-space:nowrap;font-size:clamp(12px,1.5vw,17px);letter-spacing:-.15px}
+.sql-subgroup{min-width:0}
+@media(max-width:700px){.sql-subgroup h4{font-size:clamp(10px,2.7vw,15px);letter-spacing:-.25px}}
+/* Keep every technical subcategory heading on a single line, including Generative AI & Large Language Models. */
+#skills .sql-subgroup h4 { white-space: nowrap; overflow: visible; font-size: clamp(10px, 1.45vw, 17px); }
+@media(max-width:700px) { #skills .sql-subgroup h4 { font-size: clamp(9px, 2.5vw, 15px); } }
+</style><style>
+/* Keep every Generative AI skill, including NLP, in one horizontal row. */
+#skillTags > .sql-category:first-child .sql-subgroup:first-child .skills{display:flex;flex-wrap:nowrap;gap:5px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+#skillTags > .sql-category:first-child .sql-subgroup:first-child .skill{flex:0 0 auto;white-space:nowrap;font-size:clamp(9px,0.9vw,11px);padding:8px 7px}
+/* Keep AI Applications and Machine Learning foundation skills on one row as well. */
+#skillTags > .sql-category:first-child .sql-subgroup:nth-child(2) .skills,
+#skillTags > .sql-category:first-child .sql-subgroup:nth-child(3) .skills {display:flex;flex-wrap:nowrap;gap:5px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+#skillTags > .sql-category:first-child .sql-subgroup:nth-child(2) .skill,
+#skillTags > .sql-category:first-child .sql-subgroup:nth-child(3) .skill {flex:0 0 auto;white-space:nowrap;font-size:clamp(9px,0.9vw,11px);padding:8px 7px}
+
+
+/* Compact layout: preserve the visual identity and every skill, reduce unnecessary scrolling. */
+.hero{padding-top:76px;padding-bottom:72px}
+section{padding-top:48px;padding-bottom:48px}
+.sectionhead{margin-bottom:20px}
+#about{padding-bottom:28px}
+#cognitive-strengths{padding-top:28px;padding-bottom:28px}
+#skills{padding-top:28px}
+#cognitive-strengths .skill-category{padding:18px 20px}
+#cognitive-strengths .skill{padding:7px 11px}
+#skillTags{gap:12px}
+#skillTags .compact-category{padding:0;overflow:hidden}
+#skillTags .compact-category>summary{display:flex;justify-content:space-between;align-items:center;gap:15px;cursor:pointer;list-style:none;padding:19px 25px;min-height:74px}
+#skillTags .compact-category>summary::-webkit-details-marker{display:none}
+#skillTags .compact-category>summary:focus-visible{outline:2px solid #FFB366;outline-offset:-3px}
+#skillTags .category-label{font-size:clamp(25px,3.2vw,36px);line-height:1.2;font-weight:800;color:white;font-family:'DM Sans',sans-serif}
+#skillTags .category-meta{display:inline-flex;align-items:center;gap:12px;color:#C7D8EB;font-size:12px;white-space:nowrap}
+#skillTags .category-chevron{font-size:26px;line-height:1;display:inline-block;transition:transform .2s;color:#FFB366}
+#skillTags .compact-category[open] .category-chevron{transform:rotate(90deg)}
+#skillTags .compact-category[open] .category-action::after{content:""}
+#skillTags .compact-category[open] .category-action{font-size:0}
+#skillTags .compact-category[open] .category-action::before{content:"Click to collapse";font-size:12px}
+#skillTags .compact-category>summary:hover .category-chevron{transform:translateX(4px)}
+#skillTags .compact-category[open]>summary:hover .category-chevron{transform:rotate(90deg) translateX(4px)}
+#skillTags .compact-category .sql-subgroups{padding:0 25px 23px;gap:17px}
+#skillTags .compact-category .sql-subgroup h4{margin-bottom:8px}
+#skillTags .compact-category .sql-subgroup .skills{gap:6px}
+#skillTags .compact-category .sql-subgroup .skill{padding:7px 10px}
+@media(max-width:700px){
+ .hero{padding-top:55px;padding-bottom:52px}
+ section{padding-top:34px;padding-bottom:34px}
+ #skillTags .compact-category>summary{padding:16px;min-height:62px}
+ #skillTags .compact-category .sql-subgroups{padding:0 16px 18px}
+ #skillTags .category-label{font-size:clamp(20px,5vw,27px)}
+ #skillTags .category-meta{font-size:10px;gap:6px}
+ #skillTags .compact-category[open] .category-action::before{font-size:10px}
+}
+
+/* 2026 refresh: deep forest, champagne and coral — a sophisticated editorial palette */
+:root{--ink:#F7F4E9;--muted:#C5D6D0;--line:#40655F;--accent:#F7B267;--bg:#102D2B;--soft:#214A43}
+html{background:#102D2B}
+body{background:radial-gradient(ellipse at 90% 0%,#285A50 0%,transparent 40%),linear-gradient(155deg,#102D2B 0%,#173F3A 52%,#0D2626 100%);color:#F7F4E9}
+header{background:rgba(12,39,37,.94);border-bottom-color:#40655F}
+.brand,.links a,h1,h2,h3,.hero-intro,.hero-intro span,.company h3,.stat strong,.edu strong{color:#F7F4E9}
+.brand span{color:#F7F4E9}
+.hero{background:linear-gradient(120deg,#28564D 0%,#143731 80%);border-color:#52736A;box-shadow:0 24px 70px #071D1B55}
+.hero-intro .hero-name{color:#FFFFFF}
+.hero-intro .hero-divider,.hero-intro span:last-child,.hero h1 em,.eyebrow,.small-title,.role,.num,.tagline-separator{color:#F7B267}
+.hero:after{color:#C9D4D0;opacity:.3}
+.career-tagline{color:#E1EBE5}
+.lead,.about p,.experience p,.project p,.github p,.stat span,.edu span,.date,footer,#contact p{color:#C5D6D0}
+section,.experience,.edu,.stat{border-color:#40655F}
+.sectionhead h2{border-left-color:#F7B267}
+.experience:hover{background:#255249}
+.company h3{color:#FFFFFF}
+.project,.skill-category{background:#204940;border-color:#50756B;box-shadow:0 8px 30px #0A262333}
+.project:hover{background:#2C594E;border-color:#F7B267;box-shadow:0 18px 40px #061C194D}
+.project h3{color:#FFFFFF}
+.skill,.skill-category .skill{background:#315D52;border-color:#52786D;color:#F8F8F2}
+.sql-category{background:#183D37}
+.sql-subgroup h4,.skill-category h3,.category-chevron{color:#F7B267!important}
+.sql-subgroup .skill{background:#315D52;color:#F8F8F2}
+#skillTags .category-label{color:#FFFFFF}
+#skillTags .category-meta{color:#D0DED8}
+#skillTags .compact-category>summary:focus-visible{outline-color:#F7B267}
+.btn{color:#FFFFFF;border-color:#8DA9A0}
+.btn.primary,.github .btn.primary{background:#F7B267;border-color:#F7B267;color:#17372F}
+.btn.primary:hover,.github .btn.primary:hover{background:#FFD098;border-color:#FFD098;color:#17372F}
+.github{background:#0B2926;border-color:#52756D}
+.tag{background:#365B4E;color:#FFD39A}
+.skill-search{background:#204940;border-color:#52756D;color:#fff}
+.skill-search:focus{border-color:#F7B267;box-shadow:0 0 0 2px #F7B26744}
+::selection{background:#F7B267;color:#102D2B}
+</style><style>
+/* 2026 redesign: midnight aubergine, electric lilac and coral */
+:root{--ink:#F9F5FF;--muted:#D3C9E2;--line:#58456D;--accent:#FFB5A7;--bg:#181324;--soft:#30243E}
+html{background:#181324}
+body{background:radial-gradient(ellipse at 86% 5%,#49335D 0%,transparent 32%),linear-gradient(150deg,#181324 0%,#261B35 50%,#171321 100%);color:#F9F5FF}
+header{background:rgba(24,19,36,.93);border-bottom-color:#58456D}
+.brand,.links a,h1,h2,h3,.hero-intro,.hero-intro span,.company h3,.stat strong,.edu strong{color:#F9F5FF}
+.brand span{color:#F9F5FF}
+.hero{background:linear-gradient(115deg,#3D2854 0%,#251B36 72%);border-color:#6B527D;box-shadow:0 20px 70px #09061055}
+.hero:after{color:#D7C8E9;opacity:.36}
+.hero-intro span:last-child,.hero-intro .hero-divider,.hero h1 em,.eyebrow,.small-title,.role,.num{color:#D8B4FE}
+.career-tagline{color:#E6DBEF}.tagline-separator{color:#FFB5A7}
+.lead,.about p,.experience p,.project p,.github p,.stat span,.edu span,.date,footer,#contact p{color:#D3C9E2}
+section,.experience,.edu,.stat{border-color:#58456D}
+.sectionhead h2{border-left-color:#FFB5A7}
+.experience:hover{background:#322541}
+.company h3,.project h3{color:#F9F5FF}
+.project,.skill-category{background:#30243E;border-color:#665177;box-shadow:0 8px 26px #0D09142B}
+.project:hover{background:#3D2C51;border-color:#D8B4FE;box-shadow:0 18px 40px #0D09145C}
+.skill,.skill-category .skill{background:#453454;border-color:#6F5B80;color:#F9F5FF}
+.sql-category{background:#281D38}
+.sql-subgroup h4,.skill-category h3,.category-chevron{color:#E3C6FF}
+.sql-subgroup .skill{background:#48365C;color:#F9F5FF}
+#skillTags .category-label{color:#F9F5FF}
+#skillTags .category-meta{color:#D3C9E2}
+#skillTags .category-chevron{color:#FFB5A7}
+#skillTags .compact-category>summary:focus-visible{outline-color:#FFB5A7}
+.btn{color:#F9F5FF;border-color:#9D88AE}
+.btn:hover{color:#FFB5A7;border-color:#FFB5A7}
+.btn.primary,.github .btn.primary{background:#FFB5A7;border-color:#FFB5A7;color:#24152E}
+.btn.primary:hover,.github .btn.primary:hover{background:#FFD0C5;border-color:#FFD0C5;color:#24152E}
+.github{background:#251B36;border-color:#665177}
+.tag{background:#483354;color:#FFCDC3}
+.skill-search{background:#30243E;border-color:#665177;color:#F9F5FF}
+.skill-search:focus{border-color:#D8B4FE;box-shadow:0 0 0 2px #D8B4FE44}
+::selection{background:#D8B4FE;color:#24152E}
+/* Catppuccin Mocha-inspired coding palette — rosewater, mauve, peach and teal */
+:root{--ink:#CDD6F4;--muted:#A6ADC8;--line:#45475A;--accent:#CBA6F7;--bg:#1E1E2E;--soft:#313244}
+html{background:#1E1E2E}
+body{background:radial-gradient(ellipse at 88% 5%,#38304D 0%,transparent 37%),linear-gradient(150deg,#1E1E2E 0%,#252438 55%,#181825 100%);color:#CDD6F4}
+header{background:rgba(24,24,37,.94);border-bottom:1px solid #45475A}
+.brand,.brand span,.links a,h1,h2,h3,.hero-intro,.hero-intro .hero-name,.company h3,.stat strong,.edu strong{color:#F5E0DC}
+.hero{background:linear-gradient(125deg,#363149 0%,#262638 78%);border:1px solid #58546D;box-shadow:0 18px 55px #11111B80;overflow:hidden}
+.hero:before{content:'●  ●  ●     portfolio.html';display:block;position:relative;z-index:2;font:600 12px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.3px;color:#94E2D5;margin:-30px 0 27px;padding-bottom:16px;border-bottom:1px solid #58546D}
+.hero:after{color:#F5C2E7;opacity:.32}
+.hero-intro span:last-child{color:#89B4FA}
+.hero-intro .hero-divider,.hero h1 em,.eyebrow,.small-title,.role,.num{color:#CBA6F7}
+.career-tagline{color:#BAC2DE}.tagline-separator{color:#FAB387}
+.lead,.about p,.experience p,.project p,.github p,.stat span,.edu span,.date,footer,#contact p{color:#BAC2DE}
+section,.experience,.edu,.stat{border-color:#45475A}
+.sectionhead h2{border-left-color:#CBA6F7}
+.experience:hover{background:#313244}
+.company h3,.project h3{color:#F5E0DC}
+.project,.skill-category{background:#28283C;border-color:#58546D;box-shadow:0 8px 26px #11111B50}
+.project:hover{background:#38364E;border-color:#CBA6F7;box-shadow:0 18px 40px #11111B80}
+.skill,.skill-category .skill{background:#3B3A51;border-color:#59576F;color:#CDD6F4}
+.sql-category{background:#28283C}
+.sql-subgroup h4,.skill-category h3{color:#94E2D5!important}
+.sql-subgroup .skill{background:#3B3A51;color:#CDD6F4}
+#skillTags .category-label{color:#F5E0DC}
+#skillTags .category-meta{color:#BAC2DE}
+#skillTags .category-chevron{color:#CBA6F7!important}
+#skillTags .compact-category>summary:focus-visible{outline-color:#CBA6F7}
+#skillTags .compact-category>summary:hover{background:#38364E}
+.btn{color:#F5E0DC;border-color:#9390AC}
+.btn:hover{color:#94E2D5;border-color:#94E2D5}
+.btn.primary,.github .btn.primary{background:#CBA6F7;border-color:#CBA6F7;color:#1E1E2E}
+.btn.primary:hover,.github .btn.primary:hover{background:#E2C9FF;border-color:#E2C9FF;color:#1E1E2E}
+.github{background:#28283C;border-color:#58546D}
+.tag{background:#4A3D52;color:#FAB387}
+.skill-search{background:#28283C;border-color:#58546D;color:#CDD6F4}
+.skill-search:focus{border-color:#CBA6F7;box-shadow:0 0 0 2px #CBA6F744}
+::selection{background:#CBA6F7;color:#1E1E2E}
+a:focus-visible,summary:focus-visible{outline:2px solid #CBA6F7;outline-offset:3px}
+@media(max-width:700px){.hero:before{margin-top:-18px;font-size:10px}.hero{overflow:hidden}}
+</style><style>
+/* Blue, orange and white — clean developer portfolio theme */
+:root{--ink:#12345A;--muted:#526982;--line:#D7E3EF;--accent:#F47721;--bg:#F7FAFE;--soft:#EAF3FC}
+html{background:#F7FAFE}
+body{background:radial-gradient(ellipse at 90% 4%,#DCEBFA 0%,transparent 37%),linear-gradient(155deg,#FFFFFF 0%,#F4F8FD 62%,#EAF3FC 100%);color:#12345A}
+header{background:rgba(255,255,255,.94);border-bottom:1px solid #D7E3EF}
+.brand,.brand span,.links a,h1,h2,h3,.hero-intro,.hero-intro .hero-name,.company h3,.stat strong,.edu strong{color:#12345A}
+.brand span,.hero-intro span:last-child,.hero-intro .hero-divider,.hero h1 em,.eyebrow,.small-title,.role,.num{color:#F47721}
+.hero{background:linear-gradient(125deg,#FFFFFF 0%,#EAF3FC 100%);border:1px solid #CBDFF1;box-shadow:0 18px 55px #173E6B1A;overflow:hidden}
+.hero:before{content:'●  ●  ●     portfolio.html';display:block;position:relative;z-index:2;font:600 12px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.3px;color:#1464A5;margin:-30px 0 27px;padding-bottom:16px;border-bottom:1px solid #CBDFF1}
+.hero:after{color:#A5C6E6;opacity:.34}
+.career-tagline{color:#355C80}.tagline-separator{color:#F47721}
+.lead,.about p,.experience p,.project p,.github p,.stat span,.edu span,.date,footer,#contact p{color:#526982}
+section,.experience,.edu,.stat{border-color:#D7E3EF}
+.sectionhead h2{border-left-color:#F47721}
+.experience:hover{background:#EAF3FC}
+.company h3,.project h3{color:#12345A}
+.project,.skill-category{background:#FFFFFF;border-color:#D4E2F0;box-shadow:0 8px 26px #173E6B12}
+.project:hover{background:#F2F8FF;border-color:#2C78BA;box-shadow:0 18px 40px #173E6B20}
+.skill,.skill-category .skill{background:#EAF3FC;border-color:#C9DDEE;color:#204B76}
+.sql-category{background:#FFFFFF}
+.sql-subgroup h4,.skill-category h3{color:#1464A5!important}
+.sql-subgroup .skill{background:#EAF3FC;color:#204B76}
+#skillTags .category-label{color:#12345A}
+#skillTags .category-meta{color:#526982}
+#skillTags .category-chevron{color:#F47721!important}
+#skillTags .compact-category>summary:focus-visible{outline-color:#F47721}
+#skillTags .compact-category>summary:hover{background:#F0F7FE}
+.btn{color:#12345A;border-color:#8BB2D4}
+.btn:hover{color:#D85D0B;border-color:#F47721}
+.btn.primary,.github .btn.primary{background:#F47721;border-color:#F47721;color:#FFFFFF}
+.btn.primary:hover,.github .btn.primary:hover{background:#D95F0D;border-color:#D95F0D;color:#FFFFFF}
+.github{background:#FFFFFF;border-color:#D4E2F0}
+.tag{background:#FFF0E4;color:#B44B08}
+.skill-search{background:#FFFFFF;border-color:#BCD2E6;color:#12345A}
+.skill-search:focus{border-color:#1464A5;box-shadow:0 0 0 2px #1464A533}
+::selection{background:#FAD5BA;color:#12345A}
+a:focus-visible,summary:focus-visible{outline:2px solid #F47721;outline-offset:3px}
+@media(max-width:700px){.hero:before{margin-top:-18px;font-size:10px}}
+</style><style>
+/* Python Syntax Night — palette inspired by the supplied Python screenshot */
+:root{--ink:#F4F4F5;--muted:#B8BEC9;--line:#30313C;--accent:#FF9D32;--bg:#101014;--soft:#1A1A22}
+html{background:#101014}
+body{background:radial-gradient(ellipse at 86% 0%,#242132 0%,transparent 44%),linear-gradient(155deg,#101014 0%,#15151D 65%,#171621 100%);color:#F4F4F5}
+header{background:rgba(16,16,20,.96);border-bottom:1px solid #30313C}
+.brand,.links a,h1,h2,h3,.hero-intro,.hero-intro .hero-name,.company h3,.stat strong,.edu strong{color:#F4F4F5}
+.brand span,.hero-intro .hero-divider,.hero h1 em,.eyebrow,.small-title,.role,.num{color:#FF9D32}
+.hero-intro span:last-child{color:#29C7F6}
+.hero{background:linear-gradient(115deg,#1B1A25 0%,#131319 100%);border:1px solid #393646;box-shadow:0 18px 55px #00000075;overflow:hidden}
+.hero:before{content:'●  ●  ●     portfolio.py';display:block;position:relative;z-index:2;font:600 12px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.3px;color:#29C7F6;margin:-30px 0 27px;padding-bottom:16px;border-bottom:1px solid #393646}
+.hero:after{color:#29C7F6;opacity:.20}
+.career-tagline{color:#D3D3DC}.tagline-separator{color:#FF4081}
+.lead,.about p,.experience p,.project p,.github p,.stat span,.edu span,.date,footer,#contact p{color:#B8BEC9}
+section,.experience,.edu,.stat{border-color:#30313C}
+.sectionhead h2{border-left-color:#FF4081}
+.experience:hover{background:#211E2B}
+.company h3,.project h3{color:#F4F4F5}
+.project,.skill-category{background:#1A1A22;border-color:#393646;box-shadow:0 8px 26px #00000048}
+.project:hover{background:#252331;border-color:#29C7F6;box-shadow:0 18px 40px #00000070}
+.skill,.skill-category .skill{background:#23232E;border-color:#414050;color:#F4F4F5}
+.sql-category{background:#1A1A22}
+.sql-subgroup h4,.skill-category h3{color:#A6E22E!important}
+.sql-subgroup .skill{background:#23232E;color:#F4F4F5}
+#skillTags .category-label{color:#F4F4F5}
+#skillTags .category-meta{color:#B8BEC9}
+#skillTags .category-chevron{color:#29C7F6!important}
+#skillTags .compact-category>summary:focus-visible{outline-color:#FF4081}
+#skillTags .compact-category>summary:hover{background:#252331}
+.btn{color:#F4F4F5;border-color:#68647A}
+.btn:hover{color:#29C7F6;border-color:#29C7F6}
+.btn.primary,.github .btn.primary{background:#FF9D32;border-color:#FF9D32;color:#101014}
+.btn.primary:hover,.github .btn.primary:hover{background:#FFBA70;border-color:#FFBA70;color:#101014}
+.github{background:#1A1A22;border-color:#393646}
+.tag{background:#282C1D;color:#A6E22E}
+.skill-search{background:#1A1A22;border-color:#393646;color:#F4F4F5}
+.skill-search:focus{border-color:#29C7F6;box-shadow:0 0 0 2px #29C7F644}
+::selection{background:#FF4081;color:#FFFFFF}
+a:focus-visible,summary:focus-visible{outline:2px solid #FF4081;outline-offset:3px}
+@media(max-width:700px){.hero:before{margin-top:-18px;font-size:10px}}
+</style><style>
+/* Blue-to-lime spectrum theme, sampled from the supplied palette */
+:root{--ink:#113D60;--muted:#416A7F;--line:#C8E2E9;--accent:#1984C5;--bg:#F5FBFC;--soft:#E5F5F3}
+html{background:#F5FBFC}
+body{background:linear-gradient(180deg,#EFF9FC 0%,#FFFFFF 42%,#F3FAF3 100%);color:#113D60}
+header{background:rgba(245,251,252,.95);border-bottom:1px solid #C8E2E9}
+.brand,.links a,h1,h2,h3,.hero-intro,.hero-intro .hero-name,.company h3,.stat strong,.edu strong{color:#113D60}
+.brand span,.hero-intro .hero-divider,.hero h1 em,.eyebrow,.small-title,.role,.num{color:#1984C5}
+.hero-intro span:last-child{color:#115F9A}
+.hero{background:linear-gradient(112deg,#FFFFFF 0%,#E4F7F6 65%,#DDF4CF 100%);border:1px solid #A9D8DB;box-shadow:0 18px 45px #115F9A18;overflow:hidden}
+.hero:before{content:'●  ●  ●     portfolio.py';display:block;position:relative;z-index:2;font:600 12px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.3px;color:#115F9A;margin:-30px 0 27px;padding-bottom:16px;border-bottom:1px solid #B5DFDB}
+.hero:after{color:#22A7F0;opacity:.12}
+.career-tagline{color:#295F77}.tagline-separator{color:#1984C5}
+.lead,.about p,.experience p,.project p,.github p,.stat span,.edu span,.date,footer,#contact p{color:#416A7F}
+section,.experience,.edu,.stat{border-color:#C8E2E9}
+.sectionhead h2{border-left-color:#22A7F0}
+.experience:hover{background:#E7F5F7}
+.company h3,.project h3{color:#113D60}
+.project,.skill-category{background:#FFFFFF;border-color:#C8E2E9;box-shadow:0 7px 24px #115F9A10}
+.project:hover{background:#F0FAF7;border-color:#48B5C4;box-shadow:0 15px 35px #115F9A20}
+.skill,.skill-category .skill{background:#EDF8F7;border-color:#C3E5E3;color:#115F9A}
+.sql-category{background:#FFFFFF}
+.sql-subgroup h4,.skill-category h3{color:#116B9C!important}
+.sql-subgroup .skill{background:#EDF8F7;color:#115F9A}
+#skillTags .category-label{color:#113D60}
+#skillTags .category-meta{color:#416A7F}
+#skillTags .category-chevron{color:#1984C5!important}
+#skillTags .compact-category>summary:focus-visible{outline-color:#1984C5}
+#skillTags .compact-category>summary:hover{background:#E7F6F5}
+.btn{color:#115F9A;border-color:#9BC8D9}
+.btn:hover{color:#115F9A;border-color:#48B5C4;background:#E9F8F7}
+.btn.primary,.github .btn.primary{background:#115F9A;border-color:#115F9A;color:#FFFFFF}
+.btn.primary:hover,.github .btn.primary:hover{background:#1984C5;border-color:#1984C5;color:#FFFFFF}
+.github{background:#F0FAF6;border-color:#C8E2E9}
+.tag{background:#E6F5CD;color:#376B25}
+.skill-search{background:#FFFFFF;border-color:#B4D8E1;color:#113D60}
+.skill-search:focus{border-color:#1984C5;box-shadow:0 0 0 2px #1984C533}
+::selection{background:#C9E52F;color:#113D60}
+a:focus-visible,summary:focus-visible{outline:2px solid #1984C5;outline-offset:3px}
+/* A restrained eight-stop spectrum ties the entire palette together. */
+body:before{content:'';position:fixed;top:0;left:0;right:0;height:5px;z-index:100;background:linear-gradient(90deg,#115F9A,#1984C5,#22A7F0,#48B5C4,#76C68F,#A6D75B,#C9E52F,#F4F100)}
+@media(max-width:700px){.hero:before{margin-top:-18px;font-size:10px}}
+</style><style>
+
+/* Amber-to-violet palette sampled from the user's nine-color reference */
+:root{--ink:#F4F1FF;--muted:#C4BED7;--line:#4E486B;--accent:#FFB400;--bg:#242333;--soft:#343246}
+html{background:#242333}
+body{background:linear-gradient(180deg,#242333 0%,#302D45 48%,#242333 100%);color:#F4F1FF}
+header{background:rgba(36,35,51,.96);border-bottom:1px solid #4E486B}
+.brand,.links a,h1,h2,h3,.hero-intro,.hero-intro .hero-name,.company h3,.stat strong,.edu strong{color:#F4F1FF}
+.brand span,.hero-intro .hero-divider,.hero h1 em,.eyebrow,.small-title,.role,.num{color:#FFB400}
+.hero-intro span:last-child{color:#C2B8FF}
+.hero{background:linear-gradient(115deg,#343246 0%,#48446E 63%,#5E569B 100%);border:1px solid #776BCD;box-shadow:0 18px 45px #09081565;overflow:hidden}
+.hero:before{content:'●  ●  ●     portfolio.py';display:block;position:relative;z-index:2;font:600 12px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.3px;color:#FFB400;margin:-30px 0 27px;padding-bottom:16px;border-bottom:1px solid #776BCD}
+.hero:after{color:#9080FF;opacity:.17}
+.career-tagline{color:#EEE9FF}.tagline-separator{color:#FFB400}
+.lead,.about p,.experience p,.project p,.github p,.stat span,.edu span,.date,footer,#contact p{color:#C4BED7}
+section,.experience,.edu,.stat{border-color:#4E486B}
+.sectionhead h2{border-left-color:#FFB400}
+.experience:hover{background:#3A3653}
+.company h3,.project h3{color:#F4F1FF}
+.project,.skill-category{background:#343246;border-color:#595379;box-shadow:0 8px 26px #0B091D45}
+.project:hover{background:#403B5D;border-color:#9080FF;box-shadow:0 15px 35px #0B091D65}
+.skill,.skill-category .skill{background:#48446E;border-color:#625C8A;color:#F4F1FF}
+.sql-category{background:#343246}
+.sql-subgroup h4,.skill-category h3{color:#F5C24E!important}
+.sql-subgroup .skill{background:#48446E;color:#F4F1FF}
+#skillTags .category-label{color:#F4F1FF}
+#skillTags .category-meta{color:#C4BED7}
+#skillTags .category-chevron{color:#FFB400!important}
+#skillTags .compact-category>summary:focus-visible{outline-color:#FFB400}
+#skillTags .compact-category>summary:hover{background:#403B5D}
+.btn{color:#F4F1FF;border-color:#9080FF}
+.btn:hover{color:#FFCE5A;border-color:#FFB400;background:#403B5D}
+.btn.primary,.github .btn.primary{background:#FFB400;border-color:#FFB400;color:#242333}
+.btn.primary:hover,.github .btn.primary:hover{background:#FFD064;border-color:#FFD064;color:#242333}
+.github{background:#343246;border-color:#595379}
+.tag{background:#48446E;color:#F5C24E}
+.skill-search{background:#343246;border-color:#625C8A;color:#F4F1FF}
+.skill-search::placeholder{color:#B6AECF}
+.skill-search:focus{border-color:#FFB400;box-shadow:0 0 0 2px #FFB40044}
+::selection{background:#9080FF;color:#161424}
+a:focus-visible,summary:focus-visible{outline:2px solid #FFB400;outline-offset:3px}
+body:before{content:'';position:fixed;top:0;left:0;right:0;height:5px;z-index:100;background:linear-gradient(90deg,#FFB400,#D2980D,#A57C1B,#786028,#363445,#48446E,#5E569B,#776BCD,#9080FF)}
+@media(max-width:700px){.hero:before{margin-top:-18px;font-size:10px}}
+
+</style><style>
+
+/* Five-color Data Color Picker palette: navy, indigo, magenta, coral, amber. */
+:root{--ink:#F7F8FC;--muted:#C6D4E0;--line:#31516C;--accent:#FFA600;--bg:#071C2B;--soft:#10334A}
+html{background:#071C2B}
+body{background:linear-gradient(180deg,#071C2B 0%,#0B2940 52%,#071C2B 100%);color:#F7F8FC}
+header{background:rgba(7,28,43,.96);border-bottom:1px solid #31516C}
+.brand,.links a,h1,h2,h3,.hero-intro,.hero-intro .hero-name,.company h3,.stat strong,.edu strong{color:#F7F8FC}
+.brand span,.hero h1 em,.eyebrow,.small-title,.role,.num{color:#FFA600}
+.hero-intro .hero-divider{color:#FF6361}
+.hero-intro span:last-child{color:#E7B5D0}
+.hero{background:linear-gradient(115deg,#003F5C 0%,#293F6B 55%,#58508D 100%);border:1px solid #7470AC;box-shadow:0 18px 45px #020E1B88;overflow:hidden}
+.hero:before{content:'●  ●  ●     portfolio.py';display:block;position:relative;z-index:2;font:600 12px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.3px;color:#FFA600;margin:-30px 0 27px;padding-bottom:16px;border-bottom:1px solid #7774A7}
+.hero:after{color:#BC5090;opacity:.18}
+.career-tagline{color:#F7F8FC}.tagline-separator{color:#FF6361}
+.lead,.about p,.experience p,.project p,.github p,.stat span,.edu span,.date,footer,#contact p{color:#C6D4E0}
+section,.experience,.edu,.stat{border-color:#31516C}
+.sectionhead h2{border-left-color:#FF6361}
+.experience:hover{background:#153A55}
+.company h3,.project h3{color:#F7F8FC}
+.project,.skill-category{background:#10334A;border-color:#31516C;box-shadow:0 8px 26px #020E1B55}
+.project:hover{background:#1C4260;border-color:#BC5090;box-shadow:0 15px 35px #020E1B80}
+.skill,.skill-category .skill{background:#203F61;border-color:#465B86;color:#F7F8FC}
+.sql-category{background:#10334A}
+.sql-subgroup h4,.skill-category h3{color:#FFB83D!important}
+.sql-subgroup .skill{background:#203F61;color:#F7F8FC}
+#skillTags .category-label{color:#F7F8FC}
+#skillTags .category-meta{color:#C6D4E0}
+#skillTags .category-chevron{color:#FF6361!important}
+#skillTags .compact-category>summary:focus-visible{outline-color:#FF6361}
+#skillTags .compact-category>summary:hover{background:#1C4260}
+.btn{color:#F7F8FC;border-color:#9A83BA}
+.btn:hover{color:#FFA600;border-color:#FFA600;background:#1C4260}
+.btn.primary,.github .btn.primary{background:#FFA600;border-color:#FFA600;color:#071C2B}
+.btn.primary:hover,.github .btn.primary:hover{background:#FFBF47;border-color:#FFBF47;color:#071C2B}
+.github{background:#10334A;border-color:#31516C}
+.tag{background:#3B2D5A;color:#FFB9DD}
+.skill-search{background:#10334A;border-color:#465B86;color:#F7F8FC}
+.skill-search::placeholder{color:#C6D4E0}
+.skill-search:focus{border-color:#BC5090;box-shadow:0 0 0 2px #BC509044}
+::selection{background:#BC5090;color:#FFFFFF}
+a:focus-visible,summary:focus-visible{outline:2px solid #FFA600;outline-offset:3px}
+body:before{content:'';position:fixed;top:0;left:0;right:0;height:5px;z-index:100;background:linear-gradient(90deg,#003F5C 0%,#58508D 25%,#BC5090 50%,#FF6361 75%,#FFA600 100%)}
+@media(max-width:700px){.hero:before{margin-top:-18px;font-size:10px}}
+
+</style><style>
+/* Content cleanup and compact education section */
+header{display:none!important}
+.hero:before{content:none!important;display:none!important}
+.hero{padding-top:38px!important}
+.career-tagline em{font-style:italic}
+.education-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.education-card{margin:0!important;min-width:0}
+@media(max-width:650px){.education-grid{grid-template-columns:1fr}}
+</style><style>/* Name-first hero; education section removed */
+.hero-name{position:relative;z-index:2;font-family:"Playfair Display",serif;font-size:clamp(52px,8vw,94px);font-weight:600;line-height:1.06;letter-spacing:-2px;color:#FFFFFF;margin:0 0 24px}
+.career-tagline{position:relative;z-index:2;margin-bottom:30px}
+@media(max-width:700px){.hero-name{font-size:clamp(43px,10vw,66px);letter-spacing:-1.1px;margin-bottom:20px}}
+</style><style>/* Match Tools & Technologies subcategory headings to the orange “Insights Into Impact.” accent. */
+#skillTags .sql-subgroup h4,
+#skillTags .sql-subgroup > h4,
+#skillTags .skill-category h3 { color:#FFA600 !important; }
+</style><style id="larger-expand-arrow">
+/* Larger, easier-to-see expand/collapse arrows on Tools & Technologies cards */
+#skillTags .category-chevron{font-size:44px!important;line-height:1!important;font-weight:800;min-width:46px;text-align:center;color:#FFA600!important}
+#skillTags .category-meta{gap:16px}
+@media(max-width:700px){#skillTags .category-chevron{font-size:38px!important;min-width:40px}}
+</style></head><body><header><div class="wrap"><nav></nav></div></header><main class="wrap"><div class="hero" id="home"><div class="hero-name">Sandeep Bansal</div><div class="career-tagline">Comcast<span class="tagline-separator"> | </span><em>Ex-Warner Bros. Discovery</em><span class="tagline-separator"> | </span><em>Ex-The Walt Disney Company</em><span class="tagline-separator"> | </span><em>Ex-Capital One Bank</em></div><h1>Turning Data Into Opportunity <em>&amp;</em><br/><em>Insights Into Impact.</em></h1></div><section id="cognitive-strengths"><div class="sectionhead"><h2>Cognitive Abilities &amp; Relational Strengths</h2></div><div class="skill-category"><div class="skills"><span class="skill">Team Collaboration &amp; Cross-Functional Partnership</span><span class="skill">Leadership, Mentoring &amp; Teaching</span><span class="skill">Problem-Solving &amp; Critical Thinking</span><span class="skill">Initiative &amp; Ownership</span><span class="skill">Adaptability &amp; Learning New Technologies</span><span class="skill">Mentorship &amp; Knowledge Sharing</span><span class="skill">Influencing Without Authority</span><span class="skill">Process Improvement</span><span class="skill">Stakeholder &amp; Customer-Focused Mindset</span><span class="skill">Adaptability in a Fast-Paced Environment</span><span class="skill">Emotional Intelligence &amp; Empathy</span><span class="skill">Active Listening &amp; Receptiveness to Feedback</span><span class="skill">Strategic Thinking &amp; Sound Judgment</span><span class="skill">Clear Communication &amp; Executive Storytelling</span></div></div></section><section id="skills"><div class="sectionhead"><h2>Tools &amp; Technologies</h2></div><div class="skill-categories" id="skillTags"></div></section></main><div class="wrap"><footer><span>© <span id="year"></span> Sandeep Bansal</span><span>Built with curiosity and a little code.</span></footer></div><script>
+// CONFIGURATION: Replace the placeholder with your actual GitHub username.
+const GITHUB_USERNAME = '';
+const jobs=[['Apr 2026 — Present','Comcast NBCUniversal','Senior Data Analyst','Customer experience analytics, competitive market intelligence, and customer penetration and network expansion analysis.',''],['Jan 2025 — Apr 2026','Nike','Data Insights Consultant','Retail performance, mobile experience, sales trends, and merchandising insights.',''],['Nov 2023 — Feb 2025','The Walt Disney Company','Analytics Data Engineer','Predictive models for email opt-outs, cruise booking propensity, and in-park spending behavior.',''],['Mar 2022 — Nov 2023','Warner Bros. Discovery - CNN News','Data Scientist II','Automation, audience funnel segmentation, read-time prediction, and NLP-driven headline analysis.',''],['Mar 2021 — Mar 2022','Capital One - Cognizant Technology','Data Engineer','AWS data pipelines, Redshift warehousing, and streaming analytics.',''],['Feb 2021 — Jul 2021','Citizens Bank','Application Support Engineer','Requirements validation, defect reduction, and operational reporting.','']];
+
+const skillCategories = [
+  
+  {name:'SQL', subgroups:[{"name": "Advanced SQL & Query Development", "skills": ["CTEs", "Window Functions", "Complex Joins", "Subqueries", "Conditional Aggregation", "NTILE", "CASE WHEN"]}, {"name": "Performance & Optimization", "skills": ["Query Tuning", "Execution Plans", "Predicate Pushdown", "Partition Pruning", "Join Optimization"]}, {"name": "Data Engineering & Modeling", "skills": ["ETL / ELT", "Data Validation", "Dimensional Modeling", "Fact & Dimension Tables", "Data Warehousing"]}, {"name": "Enterprise Analytics", "skills": ["Customer Segmentation", "CLV Analysis", "Conversion Analytics", "Clickstream Analysis", "KPI Development"]}, {"name": "Platforms & Tools", "skills": ["Databricks SQL", "Snowflake SQL", "PostgreSQL", "Microsoft SQL Server", "SQLite", "MySQL", "DBeaver", "SQL Workbench"]}]},
+  {name:'Python & Machine Learning', subgroups:[
+    {name:'Advanced Python & Development',skills:['Data Structures','Functions','List Comprehensions','Lambda Functions','Object-Oriented Programming','Exception Handling','File I/O','Decorators']},
+    {name:'Data Analysis & Manipulation',skills:['Pandas','NumPy','DataFrames','Data Cleaning','Data Wrangling','Data Aggregation','Data Transformation','Exploratory Data Analysis','Statistical Analysis']},
+    {name:'Machine Learning & Predictive Analytics',skills:['Scikit-learn','Regression','Classification','Decision Trees','Random Forest','XGBoost','LightGBM','Clustering','Feature Engineering']},
+    {name:'Data Engineering & Automation',skills:['ETL / ELT','Data Pipelines','Data Validation','Data Integration','API Integration','JSON Processing','Workflow Automation']},
+    {name:'Data Visualization & Reporting',skills:['Matplotlib','Seaborn','Plotly','Statistical Visualization','Time-Series Visualization','Data Storytelling','Automated Reporting']},
+    {name:'Platforms & Tools',skills:['Jupyter Notebook','JupyterLab','Anaconda','Conda','VS Code','PyCharm','Databricks','Google Colab','GitHub','pip']}
+  ]},
+  {name:'Microsoft Excel', subgroups:[
+    {name:'Advanced Formulas & Functions',skills:['XLOOKUP','VLOOKUP','INDEX & MATCH','SUMIFS & COUNTIFS','IF & IFS','IFERROR','TEXT Functions','Date & Time Functions','Dynamic Arrays','FILTER & SORT','UNIQUE']},
+    {name:'Data Analysis & Manipulation',skills:['PivotTables','PivotCharts','Data Cleaning','Data Validation','Conditional Formatting','Sorting & Filtering','What-If Analysis','Goal Seek','Scenario Analysis']},
+    {name:'Data Modeling & Automation',skills:['Power Query','Power Pivot','Data Model','Data Relationships','Calculated Columns','DAX Measures','ETL Workflows','Macros','VBA Automation']},
+    {name:'Visualization & Reporting',skills:['Interactive Dashboards','KPI Scorecards','Charts & Graphs','Slicers & Timelines','Executive Reporting','Trend Analysis','Automated Reports']},
+    {name:'Platforms & Collaboration',skills:['Excel for Microsoft 365','Excel Tables','Named Ranges','Workbook Protection','Shared Workbooks','Microsoft OneDrive','SharePoint Integration','CSV Data Imports']}
+  ]},
+  {name:'Customer Understanding', subgroups:[
+    {name:'Customer Segmentation & Profiling',skills:['Customer Segmentation','Behavioral Segmentation','Demographic Segmentation','Value-Based Segmentation','Customer Profiling','RFM Analysis','Decile & Quantile Segmentation']},
+    {name:'Customer Journey & Engagement',skills:['Customer Journey Mapping','Customer Touchpoint Analysis','Digital Engagement','Clickstream Analysis','Funnel Analysis','Customer Experience Analytics','Engagement Trends']},
+    {name:'Customer Acquisition & Conversion',skills:['Customer Acquisition Analysis','Lead & Prospect Analysis','Conversion Rate Analysis','Channel Attribution','New Customer Connects','Acquisition Funnel Optimization']},
+    {name:'Customer Value & Retention',skills:['Customer Lifetime Value (CLV)','Customer Quality Scoring (CQS)','Retention Analysis','Churn Analysis','Customer Loyalty','Cohort Analysis']},
+    {name:'Customer Insights & Decision Support',skills:['Voice of Customer','Customer Needs Analysis','Behavioral Insights','Customer Satisfaction Metrics','Opportunity Identification','Customer-Focused Recommendations']}
+  ]},
+  {name:'Products', subgroups:[
+    {name:'Product Strategy & Lifecycle',skills:['Product Strategy','Product Lifecycle Management','Product Roadmapping','Product Discovery','Product-Market Fit','Feature Prioritization','Product Performance Tracking']},
+    {name:'Product Analytics & Measurement',skills:['Product KPIs','Feature Adoption','Product Usage Analytics','Activation Rates','Engagement Metrics','Retention Metrics','Cohort Analysis']},
+    {name:'Customer Experience & Product Insights',skills:['Customer Needs Assessment','User Journey Analysis','Customer Feedback Analysis','Pain Point Identification','User Behavior Analysis','Product Experience Optimization']},
+    {name:'Product Experimentation & Optimization',skills:['A/B Testing','Experiment Design','Hypothesis Testing','Conversion Funnel Optimization','Feature Impact Analysis','Performance Benchmarking']},
+    {name:'Product Growth & Business Impact',skills:['Product Growth Analytics','Customer Acquisition','Cross-Sell & Upsell Analysis','Revenue Impact Analysis','Product Portfolio Analysis','Opportunity Sizing','Business Case Development']}
+  ]},
+  {name:'Natural Language Processing', subgroups:[
+    {name:'Text Preprocessing & Linguistic Analysis',skills:['Text Cleaning','Tokenization','Stopword Removal','Stemming & Lemmatization','Part-of-Speech Tagging','Named Entity Recognition']},
+    {name:'Text Classification & Sentiment Analysis',skills:['Text Classification','Sentiment Analysis','Intent Detection','Topic Classification','Keyword Extraction','Customer Feedback Analysis']},
+    {name:'Language Models & Semantic Understanding',skills:['Large Language Models (LLMs)','Text Embeddings','Semantic Similarity','Transformer Models','Prompt Engineering','Contextual Language Understanding']},
+    {name:'Information Extraction & Document Intelligence',skills:['Entity Extraction','Information Extraction','Document Classification','Text Summarization','Question Answering','Unstructured Data Analysis']},
+    {name:'Conversational AI & Intelligent Automation',skills:['Conversational AI','Chatbot Analytics','Intent Recognition','Conversation Analysis','Automated Text Processing','AI-Assisted Response Generation']},
+    {name:'NLP Tools & Evaluation',skills:['NLTK','spaCy','Hugging Face Transformers','Scikit-learn','Precision & Recall','F1 Score','Error Analysis']}
+  ]},
+  {name:'Miscellaneous Skills', subgroups:[
+    {name:'Version Control & Collaboration',skills:['Git','GitHub Repositories','Branching & Pull Requests','Code Reviews','Technical Documentation','Knowledge Sharing']},
+    {name:'Cloud & Data Platforms',skills:['Amazon Web Services (AWS)','Amazon S3','Amazon Redshift','Cloud Data Storage','Data Lake Concepts','Cloud Data Integration']},
+    {name:'Software Development & DevOps',skills:['REST APIs','JSON','Jenkins Pipelines','CI/CD Concepts','Java','Spring Boot']},
+    {name:'Productivity & Business Tools',skills:['Microsoft PowerPoint','Microsoft Teams','SharePoint','Microsoft 365','Executive Presentations','Process Documentation']},
+    {name:'Analytics Methods & Practices',skills:['Requirements Gathering','Root Cause Analysis','A/B Testing','Outlier Detection','Data Quality Monitoring','Stakeholder Reporting']}
+  ]},
+  {name:'Tableau & Power BI', subgroups:[
+    {name:'Dashboard Development & Visualization',skills:['Interactive Dashboards','Executive Dashboards','KPI Scorecards','Data Visualization','Dashboard Design','Filters & Parameters','Drill-Down Analysis','Cross-Filtering','Dashboard Navigation']},
+    {name:'Data Modeling & Preparation',skills:['Data Connections','Data Relationships','Joins & Blending','Power Query','Data Transformation','Calculated Fields','Data Modeling','Star Schema','Data Refresh']},
+    {name:'Advanced Analytics & Calculations',skills:['DAX','Table Calculations','Level of Detail (LOD) Expressions','Time Intelligence','Calculated Measures','Running Totals','Period-over-Period Analysis','Trend Analysis','Forecasting']},
+    {name:'Business Intelligence & Reporting',skills:['Executive Reporting','Performance Monitoring','Customer Analytics','Sales Analytics','Segmentation Analysis','Conversion Analysis','Operational Reporting','Data Storytelling']},
+    {name:'Publishing & Collaboration',skills:['Tableau Desktop','Tableau Server','Tableau Cloud','Power BI Desktop','Power BI Service','Workspaces','Report Publishing','Scheduled Refresh','Row-Level Security']}
+  ]}
+];
+
+
+function renderSkills(query='') {
+  const q=query.trim().toLowerCase();
+  const html=skillCategories.map(category=>{
+    if(category.subgroups){
+      const subs=category.subgroups.map(group=>({name:group.name,skills:group.skills.filter(skill=>!q||skill.toLowerCase().includes(q)||group.name.toLowerCase().includes(q)||category.name.toLowerCase().includes(q))})).filter(group=>group.skills.length);
+      if(!subs.length)return '';
+      return `<details class="skill-category sql-category compact-category"><summary><span class="category-label">${category.name}</span><span class="category-meta"><span class="category-action">Hover or click to expand</span><span class="category-chevron" aria-hidden="true">➜</span></span></summary><div class="sql-subgroups">${subs.map(group=>`<div class="sql-subgroup"><h4>${group.name}</h4><div class="skills">${group.skills.map(skill=>`<span class="skill">${skill}</span>`).join('')}</div></div>`).join('')}</div></details>`;
+    }
+    const skills=category.skills.filter(skill=>!q||skill.toLowerCase().includes(q)||category.name.toLowerCase().includes(q));
+    if(!skills.length)return '';
+    return `<article class="skill-category ${category.detailed ? 'skill-category-detailed' : ''}"><h3>${category.name}</h3><div class="skills">${skills.map(skill=>`<span class="skill">${skill}</span>`).join('')}</div></article>`;
+  }).join('');
+  document.getElementById('skillTags').innerHTML=html||'<p class="skill-empty">No matching skills found.</p>';
+  // Hover to expand on desktop/laptop pointers; retain tap/click on touchscreens.
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.querySelectorAll('#skillTags details.skill-category').forEach(card => {
+      card.addEventListener('mouseenter', () => { card.open = true; });
+      card.addEventListener('mouseleave', () => { card.open = false; });
+    });
+  }
+
+}
+renderSkills();
+
+if(GITHUB_USERNAME)document.getElementById('githubLink').href='https://github.com/'+encodeURIComponent(GITHUB_USERNAME);
+document.getElementById('year').textContent=new Date().getFullYear();
+</script></body></html>
